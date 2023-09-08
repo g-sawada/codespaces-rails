@@ -78,4 +78,7 @@ Rails.application.configure do
   config.hosts << pf_host
 
   config.action_cable.allowed_request_origins = ["https://#{pf_host}"]
+
+  # 以下を追加することで，クラウドIDEでローカルWebサーバーに接続可能に
+  eonfig.hosts.clear
 end
